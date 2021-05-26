@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4"/>
+
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="https://github.com/openembedded"  name="oe"/>
+  <remote fetch="https://github.com" name="github"/>
+
+  <project name="meta-openembedded" remote="oe" revision="dunfell" path="sources/meta-openembedded"/>
+  <project name="git/poky" remote="yocto" revision="dunfell" path="sources/poky"/>
+  <project name="git/meta-ti" remote="yocto" revision="dunfell" path="sources/meta-ti"/>
+  <project name="git/meta-arm" remote="yocto" revision="dunfell" path="sources/meta-arm"/>
+  <project name="sergiineodnichyk/meta-beaglebone-custom" remote="github" revision="master" path="sources/meta-beaglebone-custom"/>
+  <project name="sergiineodnichyk/env-beaglebone" remote="github" revision="master" path="env">
+      <copyfile dest="Makefile" src="Makefile.root"/>
+  </project>
+
+</manifest>
